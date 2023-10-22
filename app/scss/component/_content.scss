@@ -155,6 +155,9 @@
             border-radius: 50%;
         }
     }
+    .non__outline {
+        outline: none;
+    }
     .small {
         @include addaptive-value(width, 30, 20, 1);
         @include addaptive-value(height, 30, 20, 1);
