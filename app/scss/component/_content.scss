@@ -1,0 +1,225 @@
+.content {
+    @include addaptive-value(padding-top, 120, 40, 1);
+    overflow-x: hidden;
+    &__wrap {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+    &__left {
+        z-index: 5;
+    }
+    &__title {
+        @extend %content-title_font;
+        span {
+            color: #ff8345;
+        }
+    }
+    &__text {
+        @extend %content-text_font;
+        margin-top: 20px;
+        max-width: 444px;
+    }
+    &__button {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 11.5px 22px;
+        background-color: #48b774;
+        border-radius: 30px;
+        color: #fff;
+        line-height: normal;
+        font-size: 15px;
+    }
+    &__form {
+        position: relative;
+        max-width: 597px;
+        margin-top: 50px;
+    }
+    &__search-input {
+        background-color: #ffffff;
+        width: 100%;
+        border-radius: 100px;
+        height: 62px;
+        padding-left: 40px;
+        &::placeholder {
+            @extend %secondary_font;
+        }
+    }
+    &__search-btn {
+        position: absolute;
+        top: 3px;
+        bottom: 3px;
+        right: 6px;
+        padding: 15px;
+        background-color: #48B774;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__users {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        min-height: 38px;
+
+        gap: 12px;
+        margin-top: 40px;
+        position: relative;
+        img {
+            outline: solid #ffffff;
+            outline-width: 3px;
+            border-radius: 50%;
+        }
+    }
+    &__users-img {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    &__users-img-1 {
+        z-index: 4;
+    }
+    &__users-img-2 {
+        z-index: 3;
+        left: 20px;
+    }
+    &__users-img-3 {
+        z-index: 2;
+        left: 40px;
+    }
+
+    &__users-btn {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 64px;
+        width: 38px;
+        height: 38px;
+        background-color: #ff8345;
+        border-radius: 50%;
+        outline: solid #ffffff;
+        outline-width: 3px;
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+    }
+
+    &__users-link {
+        @extend %secondary-user_font;
+        margin-left: 126px;
+        span {
+            color: #fd905a;
+        }
+    }
+
+    &__right {
+        padding-right: 20px;
+        z-index: 4;
+        justify-self: end;
+        position: relative;
+    }
+    &__right-box {
+        @include addaptive-value(width, 450, 220, 1);
+        @include addaptive-value(height, 450, 220, 1);
+
+        border: 2px solid rgb(64, 64, 64);
+        border-radius: 50%;
+        position: relative;
+        transform: rotate(-180deg);
+        transition: all 1s ease-in-out;
+    }
+    &__box-img {
+        position: absolute;
+        border-radius: 50%;
+        transform-origin: center;
+        outline: solid;
+        outline-color: #ffffff;
+        @include addaptive-value(outline-width, 10, 5, 1);
+        transition: all 1s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+    }
+    .small {
+        @include addaptive-value(width, 30, 20, 1);
+        @include addaptive-value(height, 30, 20, 1);
+        @include addaptive-value(margin, -15, -10, 1);
+        top: 50%;
+        left: 50%;
+    }
+    .large {
+        @include addaptive-value(width, 60, 30, 1);
+        @include addaptive-value(height, 60, 30, 1);
+        @include addaptive-value(margin, -30, -15, 1);
+        top: 50%;
+        left: 50%;
+    }
+    &__right-inner {
+        position: absolute;
+        @include addaptive-value(width, 836, 400, 1);
+        @include addaptive-value(top, 53, 30, 1);
+        @include addaptive-value(left, -193, -90, 1);
+    }
+    &__right-img {
+        z-index: 5;
+        object-fit: contain;
+        width: 100%;
+
+    }
+    .start__fan {
+        animation: fan 10s linear infinite;
+    }
+    .start__spin {
+        animation: fan_reverse 10s linear infinite;
+    }
+}
+
+@media (max-width: 768px) {
+        .content {
+            &__wrap {
+                display: flex;
+                flex-wrap: wrap-reverse;
+                justify-content: center;
+                align-items: center;
+            }
+            &__left {
+                @include addaptive-value(margin-top, 160, 80, 1);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            &__form {
+                align-self: stretch;
+            }
+            &__right {
+                padding-right: 0;
+            }
+        }
+}
+
+
+@keyframes fan {
+    from {
+        transform: rotate(-180deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+@keyframes fan_reverse {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}

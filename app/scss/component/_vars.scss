@@ -1,0 +1,64 @@
+@import "./mixin";
+$bodyBackground: #ecf7f3;
+
+%primary_font {
+    font-family: "Poppins", sans-serif;
+    @include addaptive-value(font-size, 16, 14, 1);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+%secondary_font {
+    color: #a1a1a1;
+    font-family: "Roboto", sans-serif;
+    @include addaptive-value(font-size, 16, 14, 1);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.16px;
+}
+%secondary-user_font {
+    color: #707070;
+    font-family: "Roboto", sans-serif;
+    @include addaptive-value(font-size, 16, 14, 1);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+%header-logo_font {
+    color: #2d2d2d;
+    font-family: "Poppins", sans-serif;
+    @include addaptive-value(font-size, 25, 20, 1);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+%header-nav_font {
+    color: #4a4a4a;
+    font-family: "Poppins", sans-serif;
+    @include addaptive-value(font-size, 16, 14, 1);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+%content-title_font {
+    color: #2d2d2d;
+    font-family: "Poppins", sans-serif;
+    @include addaptive-value(font-size, 48, 38, 1);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 135.417%;
+}
+%content-text_font {
+    color: #7c7c7c;
+    font-family: "Poppins", sans-serif;
+    font-family: Poppins;
+    @include addaptive-value(font-size, 16, 14, 1);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 173.333%;
+}

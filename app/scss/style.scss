@@ -1,0 +1,13 @@
+@import "./component/vars";
+@import "./component/fonts";
+@import "./component/reset";
+@import "./component/libs";
+@import "./component/global";
+@import "./component/mixin";
+@import "./component/header";
+@import "./component/content";
+
+body {
+    background: $bodyBackground;
+}
+
