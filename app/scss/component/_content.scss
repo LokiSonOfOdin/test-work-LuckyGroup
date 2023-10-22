@@ -4,6 +4,7 @@
     &__wrap {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         align-items: center;
     }
     &__left {
@@ -129,7 +130,7 @@
         @include addaptive-value(width, 450, 220, 1);
         @include addaptive-value(height, 450, 220, 1);
 
-        border: 2px solid rgb(64, 64, 64);
+        border: 2px solid #E8E8E8;
         border-radius: 50%;
         position: relative;
         transform: rotate(-180deg);
