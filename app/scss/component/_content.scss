@@ -1,11 +1,11 @@
 .content {
     @include addaptive-value(padding-top, 120, 40, 1);
-    overflow-x: hidden;
+
     &__wrap {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
         align-items: center;
+        overflow-x: clip;
     }
     &__left {
         z-index: 5;
@@ -52,7 +52,7 @@
         bottom: 3px;
         right: 6px;
         padding: 15px;
-        background-color: #48B774;
+        background-color: #48b774;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -109,7 +109,6 @@
         border-radius: 50%;
         display: inline-block;
         text-align: center;
-
     }
 
     &__users-link {
@@ -129,7 +128,8 @@
     &__right-box {
         @include addaptive-value(width, 450, 220, 1);
         @include addaptive-value(height, 450, 220, 1);
-        border: 2px solid #E8E8E8;
+
+        border: 2px solid #e8e8e8;
         border-radius: 50%;
         position: relative;
         transform: rotate(-180deg);
@@ -155,9 +155,6 @@
             border-radius: 50%;
         }
     }
-    .non__outline {
-        outline: none;
-    }
     .small {
         @include addaptive-value(width, 30, 20, 1);
         @include addaptive-value(height, 30, 20, 1);
@@ -182,7 +179,9 @@
         z-index: 5;
         object-fit: contain;
         width: 100%;
-
+    }
+    .non__outline {
+        outline: none;
     }
     .start__fan {
         animation: fan 10s linear infinite;
@@ -193,28 +192,27 @@
 }
 
 @media (max-width: 768px) {
-        .content {
-            &__wrap {
-                display: flex;
-                flex-wrap: wrap-reverse;
-                justify-content: center;
-                align-items: center;
-            }
-            &__left {
-                @include addaptive-value(margin-top, 160, 80, 1);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            &__form {
-                align-self: stretch;
-            }
-            &__right {
-                padding-right: 0;
-            }
+    .content {
+        &__wrap {
+            display: flex;
+            flex-wrap: wrap-reverse;
+            justify-content: center;
+            align-items: center;
         }
+        &__left {
+            @include addaptive-value(margin-top, 160, 80, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__form {
+            align-self: stretch;
+        }
+        &__right {
+            padding-right: 0;
+        }
+    }
 }
-
 
 @keyframes fan {
     from {
