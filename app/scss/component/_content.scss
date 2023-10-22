@@ -129,7 +129,6 @@
     &__right-box {
         @include addaptive-value(width, 450, 220, 1);
         @include addaptive-value(height, 450, 220, 1);
-
         border: 2px solid #E8E8E8;
         border-radius: 50%;
         position: relative;
